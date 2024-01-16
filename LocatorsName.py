@@ -10,8 +10,8 @@ options.add_experimental_option("detach", True)
 
 driver = webdriver.Chrome(options=options,service=ChromeService(ChromeDriverManager().install()))
 
-driver.get('https://classic.crmpro.com/')
-driver.find_element(By.NAME,"username").send_keys("mahtab.sentu@gmail.com")
-driver.find_element(By.NAME,"password").send_keys('Bangla@45#')
-driver.find_element(By.XPATH,'//input[@value="Login"]').click()
+driver.get('https://web.facebook.com/')
+driver.find_element(By.NAME,"email").send_keys("mahtab.sentu@gmail.com")
+driver.find_element(By.NAME,"pass").send_keys('#')
+driver.find_element(By.XPATH,"//button[@value='1']").click()
 
