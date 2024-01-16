@@ -4,7 +4,8 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 import time
 from webdriver_manager.firefox import GeckoDriverManager
-from selenium.webdriver.firefox.service import Service
+from selenium.webdriver.firefox.service import Service as FirefoxService
+
 # Fix Selenium Browser Closes Automatically & 
 # Immediately After Test Without Calling Quit or Close()
 # below 2 lines 

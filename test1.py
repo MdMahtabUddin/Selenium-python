@@ -9,6 +9,7 @@ import time
 options = webdriver.ChromeOptions()
 options.add_experimental_option("detach", True)
 
+
 driver = webdriver.Chrome(options=options,service=ChromeService(ChromeDriverManager().install()))
 driver.get('https://www.google.com/')
 
@@ -16,7 +17,7 @@ driver.find_element(By.NAME,"q").send_keys("Mahtab")
 
 print(driver.title)
 
-time.sleep(10)
+time.sleep(30)
 driver.quit()
 
 
