@@ -3,6 +3,7 @@ from selenium.webdriver.edge.service import Service as EdgeService
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
 import time
 
+
 options = webdriver.EdgeOptions()
 options.add_experimental_option("detach", True)
 
