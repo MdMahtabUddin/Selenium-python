@@ -25,5 +25,13 @@ driver.get('https://app.hubspot.com/login')
 
 # Using Xpath 
 
-driver.find_element(By.XPATH,"//input[@class='form-control private-form__control login-email']").send_keys('mahtab')
-driver.find_element(By.XPATH,"//input[@class='form-control private-form__control login-password m-bottom-3']").send_keys('bd45')
+# driver.find_element(By.XPATH,"//input[@class='form-control private-form__control login-email']").send_keys('mahtab')
+# driver.find_element(By.XPATH,"//input[@class='form-control private-form__control login-password m-bottom-3']").send_keys('bd45')
+
+# Using Link text 
+
+driver.find_element(By.LINK_TEXT,'Sign up').click()
+
+# Using Partial Link Text
+
+driver.find_element(By.PARTIAL_LINK_TEXT,'Sign in').click()
