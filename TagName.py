@@ -11,6 +11,7 @@ options.add_experimental_option("detach", True)
 driver = webdriver.Chrome(options=options,service=ChromeService(ChromeDriverManager().install()))
 
 driver.get('https://www.freshworks.com/')
+
 headerText = driver.find_element(By.TAG_NAME,'h1')
 
 # print website headerText
