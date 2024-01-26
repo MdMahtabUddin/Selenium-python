@@ -12,20 +12,23 @@ options.add_experimental_option("detach", True)
 
 
 driver = webdriver.Chrome(options=options,service=ChromeService(ChromeDriverManager().install()))
-driver.implicitly_wait(16)
+driver.implicitly_wait(10)
 
 
 
-driver.get('https://jqueryui.com/droppable/')
+driver.get('https://swisnl.github.io/jQuery-contextMenu/demo.html')
 
-source =driver.find_element(By.ID,'draggable')
-target =driver.find_element(By.ID,'droppable')
+right_click=driver.find_element(By.XPATH,"//span[text()='right click me']")
+act_chans =ActionChains(driver)
+act_chans.context_click(right_click).perform()
 
-act_chain=ActionChains(driver)
-# act_chain.drag_and_drop(source,target).perform()
+right_click_option = driver.find_elements(By.CSS_SELECTOR,'li.context-menu-item span')
 
-act_chain.click_and_hold(source).move_to_element(target).release().perform()
+for ele in right_click_option:
+    print(ele.text)
+    if(ele.text=='Paste'):
+        ele.click()
+        break
+        
 
-
-
-
+# driver.close()

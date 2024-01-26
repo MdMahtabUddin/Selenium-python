@@ -12,20 +12,8 @@ options.add_experimental_option("detach", True)
 
 
 driver = webdriver.Chrome(options=options,service=ChromeService(ChromeDriverManager().install()))
-driver.implicitly_wait(16)
+driver.implicitly_wait(10)
 
 
 
-driver.get('https://jqueryui.com/droppable/')
-
-source =driver.find_element(By.ID,'draggable')
-target =driver.find_element(By.ID,'droppable')
-
-act_chain=ActionChains(driver)
-# act_chain.drag_and_drop(source,target).perform()
-
-act_chain.click_and_hold(source).move_to_element(target).release().perform()
-
-
-
-
+driver.get('https://swisnl.github.io/jQuery-contextMenu/demo.html')
