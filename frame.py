@@ -14,17 +14,13 @@ options.add_experimental_option("detach", True)
 driver = webdriver.Chrome(options=options,service=ChromeService(ChromeDriverManager().install()))
 driver.implicitly_wait(10)
 
+driver.get('https://www.londonfreelance.org/courses/frames/index.html')
+
+# browser-page-frame-element
+# driver.switch_to.frame(2)
+driver.switch_to.frame('main')
+headerValue= driver.find_element(By.CSS_SELECTOR,'body>h2').text
+print(headerValue)
 
 
-driver.get('https://mail.rediff.com/cgi-bin/login.cgi')
 
-driver.find_element(By.NAME,'proceed').click()
-time.sleep(3)
-
-# alert =driver.switch_to.alert
-alert =driver.switch_to.default_content()
-print(alert.text)
-alert.accept()
-
-# time.sleep(3)
-# driver.quit()
