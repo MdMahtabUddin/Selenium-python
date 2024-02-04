@@ -15,6 +15,4 @@ driver = webdriver.Chrome(options=options,service=ChromeService(ChromeDriverMana
 driver.implicitly_wait(10)
 
 
-driver.get('https://cgi-lib.berkeley.edu/ex/fup.html')
-
-driver.find_element(By.NAME,'upfile').send_keys("\Users\myLearninX\Desktop\MdMahtabUddin.pdf")
+driver.get('https://www.amazon.in/')

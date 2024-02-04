@@ -15,6 +15,18 @@ driver = webdriver.Chrome(options=options,service=ChromeService(ChromeDriverMana
 driver.implicitly_wait(10)
 
 
-driver.get('https://cgi-lib.berkeley.edu/ex/fup.html')
+driver.get('https://www.amazon.in/')
 
-driver.find_element(By.NAME,'upfile').send_keys("\Users\myLearninX\Desktop\MdMahtabUddin.pdf")
+driver.find_element(By.LINK_TEXT,'Best Sellers').click()
+time.sleep(2)
+
+driver.back()
+time.sleep(2)
+
+driver.forward()
+time.sleep(2)
+
+driver.back()
+time.sleep(2)
+
+driver.quit()
